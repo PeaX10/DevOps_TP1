@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   backend:
-    build: api
+    build: ./api
     networks:
       - my-network
     depends_on:
@@ -9,16 +9,17 @@ services:
     ports:
       - "8080:8080"
   database:
-    build: postgres
+    build: ./postgres
     networks:
       - my-network
   httpd:
-    build: http
+    build: ./http
     ports:
       - "80:80"
     networks:
       - my-network
     depends_on:
       - backend
+      - database
 networks:
   my-network:

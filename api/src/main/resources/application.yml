@@ -8,7 +8,7 @@ spring:
     generate-ddl: false
     open-in-view: true
   datasource:
-    url: "jdbc:postgresql://postgres:5432/db_tp1"
+    url: "jdbc:postgresql://database:5432/db_tp1"
     username: guest
     password: guest_pwd
     driver-class-name: org.postgresql.Driver
