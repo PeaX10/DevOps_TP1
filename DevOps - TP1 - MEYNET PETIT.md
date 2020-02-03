@@ -32,8 +32,8 @@ To use the reverse proxy properly we have to enable the "mod_proxy" and the "mod
 
 ## Docker-Compose
 *__Useful subcommands__*  
-``docker-compose up`` to start the docker-compose
-``docker-compose down`` to shutdown the docker-compose
-``docker-compose help`` to see help on docker-compose sub-commands
+``docker-compose up`` to start the docker-compose  
+``docker-compose down`` to shutdown the docker-compose  
+``docker-compose help`` to see help on docker-compose sub-commands  
 
 ## Docker Hub
