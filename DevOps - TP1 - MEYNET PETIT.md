@@ -19,9 +19,9 @@ The ``-v /my/own/datadir:/var/lib/postgresql/data`` option is required if we wan
 ## Backend API
 *__Why using multistage build ?__*  
 In the first step, we compiled our java code and run it with the container. 
-The second step introduce the multistage build. The container will first compile the code with openjdk then get the output file generated and run it with openjre. It is very useful when you are in a developer team: everyone compile on the same image so we are sure we are all using the same jdk/jre versions.
+The second step introduce the multistage build. The container will first compile the code with openjdk then get the output file generated and run it with openjre. It is very useful when you are in a developer team: everyone compile on the same image so we are sure we are all using the same jdk/jre versions.  
 *__Why using Maven ?__*  
-Here we have only one file to compile and it's a simple "Hello World". If we have a lot of files, it will be endless to compile them one by one. That's why we use Maven. It groups all dependencies in a single file, which allows us to run a single file with all dependencies.
+Here we have only one file to compile and it's a simple "Hello World". If we have a lot of files, it will be endless to compile them one by one. That's why we use Maven. It groups all dependencies in a single file, which allows us to run a single file with all dependencies.  
 *__How to interact with Postgres DB from Web API ?__*  
 First we have created a network called "my-net" with ``docker network create my-net``.
 After that, when we run both the postgres and the api containers, we specfied ``--network my-net`` and finally on the api one we added a binding between port 8080 from the container to port 8080 from the host with ``-p 8080:8080``. It allows us to navigate through the database with a web navigator (eg: http://localhost:8080/departments/IRC/students to get all students in the IRC department).
