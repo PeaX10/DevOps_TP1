@@ -1,5 +1,5 @@
 ﻿# DevOps: TP1 - Docker
-In this TP we are goind to mostly use alpine distribution of Linux because of it weight only 8MB.
+In this TP we are going to mostly use alpine distribution of Linux because it weights only 8MB.
 ## Database.
 *__User / password in Dockerfile ?__*  
 Plain text user/password in "Dockerfile" isn't very secure. It is never recommended to put these informations in a human readable file. Using the "-e" when running the image is better.
